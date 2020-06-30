@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Funciones</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="MyStyle.css">
+        
+        <!--Creamos una pequeña funcion muy sencilla capaz de mostrar la fecha del dia en que estemos-->
+        <script>
+            function dia_de_hoy(){
+                var hoy = new Date();  /*Objeto de fecha*/
+              //  document.write(hoy); /*Formato largo para mostrar la fecha*/
+                document.write(hoy.toDateString()); /*Muestra la fecha en un formato mas corto*/
+            }
+        </script>
+        
+        
+        <!--Funcion pide nombre y lo recibe por parametro, se manda a llamar la funcion dentro del body con la variable que se pidio-->
+        <script> 
+            function escribeNombre(nombre){
+                document.write(nombre);
+            }
+            var miNombre=prompt("Ingresa Nombre:");
+        </script>
+         
+        
+        <!--Funciones y peticion al usaurio mediante ventana modal los valores de las variables-->
+        <script>    
+            function suma(a,b){
+                document.write("La Suma es: " + (a+b));
+            }
+            function resta(a,b){
+                document.write("La Resta es: " + (a-b));
+            }
+            function multi(a,b){
+                document.write("La Multiplicacion es: " + (a*b));
+            }
+            function div(a,b){
+                document.write("La Division es: " + (a/b));
+            }  
+            var a=prompt("Numero1:");
+            var b=prompt("Numero2:");
+                a=parseInt(a);
+                b=parseInt(b);
+        </script>
+    </head>
+    
+        
+    
+    
+    
+    <body class="centrado">
+        
+        <!--Mandamos a llamar la funcion para que nos muestre la fecha y esta se muestre justa despues del texto-->
+        <h1><strong>¿ Y que dia es hoy ?</strong></h1>
+            <p> Hoy es dia: <script> dia_de_hoy(); </script></p>
+        
+        <!--Invocamos el metodo: escribeNombre y recibe la variable, presenta el nombre en el sitio web-->
+            <p style="font-size: 24px; font-weight: bold">Hola, <script>escribeNombre(miNombre);</script> Bienvenido a mi pagina Web</p>
+            
+            <!--Mandamos a llamar las funciones piden valores y presentan los resultados dentro del sitio web-->
+            <p><strong>Operaciones:</strong><br>
+                <script>
+                suma(a,b);
+                document.write("<br>");
+                resta(a,b);
+                document.write("<br>");
+                multi(a,b);
+                document.write("<br>");
+                div(a,b);
+                document.write("<br>");
+                </script>
+            </p>
+        
+    </body>
+</html>
